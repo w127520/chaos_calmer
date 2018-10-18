@@ -956,7 +956,7 @@ endif
 #
 
 ifeq ($(SUBTARGET),mt7621)
-  TARGET_DEVICES += mt7621 wsr-600 wsr-1166 dir-860l-b1 firewrt pbr-m1 re6500 zbt-wg2626
+  TARGET_DEVICES += mt7621 wsr-600 wsr-1166 dir-860l-b1 firewrt pbr-m1 re6500 zbt-wg2626 phicomm-k2p
 endif
 
 define Device/mt7621
@@ -966,6 +966,10 @@ endef
 
 define Device/wsr-600
   DTS := WSR-600
+endef
+
+define Device/phicomm-k2p
+  DTS := phicomm-k2p
 endef
 
 define Device/re6500

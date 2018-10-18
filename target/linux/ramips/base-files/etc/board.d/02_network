@@ -105,7 +105,8 @@ ramips_setup_interfaces()
 		ucidef_add_switch_vlan "switch0" "1" "1 2 3 4 9t"
 		ucidef_add_switch_vlan "switch0" "2" "0 9t"
 		;;
-
+		
+	phicomm-k2p | \
         re6500 | \
 	asl26555)
 		ucidef_set_interface_lan "eth0.1"

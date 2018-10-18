@@ -211,6 +211,9 @@ ramips_board_detect() {
 	*"Linksys RE6500")
 		name="re6500"
 		;;
+	*"Phicomm K2p")
+		name="phicomm-k2p"
+		;;		
 	*"Planex MZK-750DHP")
 		name="mzk-750dhp"
 		;;
