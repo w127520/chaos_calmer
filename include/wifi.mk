@@ -17,10 +17,10 @@ ifeq ($(FILE_76x2_EXIT),exist)
 	$(call PatchDir,$(PKG_BUILD_DIR),$(MT76x2_PATCH_DIR),mt76x2/)
 endif
 
-ifeq ($(FILE_7615_EXIT),exist)
 ifeq ($(CONFIG_PACKAGE_mt7615e), y)
 	@echo =======7615 exist=======
 	@echo "Extract 7615 wifi driver";
+	cp -f $(TOPDIR)/package/ramips/patch_file/MT7615_LinuxAP_V4.4.1.2_20170514.tar.bz2  $(DL_DIR)/
 	cp -f $(TOPDIR)/package/ramips/patch_file/1000-add-ramips-mt7615.patch $(TOPDIR)/target/linux/ramips/patches-3.18/
 	cp -f $(TOPDIR)/package/ramips/patch_file/1604-mt7615-buildin.patch $(TOPDIR)/target/linux/ramips/patches-3.18/
 	cp -rf $(TOPDIR)/package/ramips/ralink  $(LINUX_DIR);
@@ -33,6 +33,5 @@ ifeq ($(CONFIG_PACKAGE_mt7615e), y)
 	$(TAR) -jxvf $(DL_DIR)/$(WIFI_SOURCE_7615) -C $(LINUX_DIR)/drivers/net/wireless/;
 	$(call PatchDir,$(PKG_BUILD_DIR),$(MT7615_PATCH_DIR),mt7615/)
 endif	
-endif
 
 endef
