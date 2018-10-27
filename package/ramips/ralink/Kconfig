@@ -11,6 +11,14 @@ menu "Ralink Module"
 
 #source "drivers/net/raeth/Kconfig"
 
+config  MT7628_SOC_WIFI
+		bool    "Support MT7628 Wifi"
+		default n	
+		
+config  MT7615E_WIFI_MD
+		bool    "Support MT7615E_WIFI_MD Wifi"
+		default n			
+
 config  HW_IPSEC
 	depends on RALINK_MT7621
 	bool    "HW IPSec Enable"

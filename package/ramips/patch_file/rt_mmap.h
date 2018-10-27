@@ -585,7 +585,7 @@
 #define CPLL_DIV_RATIO                  (0x3UL << CPLL_DIV_RATIO_SHIFT)
 #define BASE_CLOCK                      40      /* Mhz */
 
-#elif defined (CONFIG_RALINK_MT7621) || defined (CONFIG_SOC_MT7621)
+#elif defined (CONFIG_RALINK_MT7621) || defined (CONFIG_MT7615E_WIFI_MD)
 
 #define RALINK_SYSCTL_BASE		0xBE000000
 #define RALINK_TIMER_BASE		0xBE000100
@@ -700,7 +700,7 @@
 #define RALINK_TESTSTAT			0xBE000018
 #define RALINK_TESTSTAT2		0xBE00001C
 
-#elif defined (CONFIG_RALINK_MT7628)
+#elif defined (CONFIG_RALINK_MT7628) || defined (CONFIG_MT7628_SOC_WIFI)
 
 #define RALINK_SYSCTL_BASE		0xB0000000
 #define RALINK_TIMER_BASE		0xB0000100
